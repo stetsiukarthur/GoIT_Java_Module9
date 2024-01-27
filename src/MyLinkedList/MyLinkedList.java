@@ -12,11 +12,11 @@ public class MyLinkedList<T> {
         if (firstNode == null) {
             firstNode = new Node<>(null, null, value);
         } else if (lastNode == null) {
-            lastNode = new Node<>(firstNode, null, value);
+            lastNode = new Node<T>(firstNode, null, value);
             firstNode.setNextNode(lastNode);
         } else {
 
-            Node<T> newLastNode = new Node<>(lastNode, null, value);
+            Node<T> newLastNode = new Node<T>(lastNode, null, value);
             lastNode.setNextNode(newLastNode);
             lastNode = newLastNode;
         }
